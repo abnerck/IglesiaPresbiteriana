@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Establece una fuente más simple */
+            background-color: #f4f4f4; /* Color de fondo para diferenciar */
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
+        .cuadro {
+            background-color: rgba(225, 225, 234, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            position: relative; /* Necesario para el tooltip */
+        }
+        .tooltip {
+            display: none; /* Oculta el tooltip por defecto */
+            position: absolute; /* Posiciona el tooltip */
+            bottom: 100%; /* Coloca el tooltip arriba del cuadro */
+            left: 50%; /* Centra horizontalmente */
+            transform: translateX(-50%); /* Ajusta el centrado */
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+            color: white; /* Color del texto */
+            padding: 5px 10px; /* Espaciado interno */
+            border-radius: 4px; /* Bordes redondeados */
+            white-space: nowrap; /* Evita el salto de línea */
+            z-index: 10; /* Asegura que el tooltip esté encima de otros elementos */
+        }
+        .cuadro:hover .tooltip {
+            display: block; /* Muestra el tooltip al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+
+<center><h1>Nos reunimos</h1></center>
+
+<div class="container">
+    <div class="cuadro">
+        <h2>Lunes</h2>
+        <p>Estudio Bíblico</p>
+        <p>08:00 pm a 09:00 pm</p>
+        <span class="tooltip">Da click para obtener el enlace</span>
+    </div>
+    <div class="cuadro">
+        <h2>Miércoles</h2>
+        <p>Oración</p>
+        <p>08:00 pm a 09:00 pm</p>
+        <span class="tooltip">Da click para obtener el enlace</span>
+    </div>
+    <div class="cuadro">
+        <h2>Domingo</h2>
+        <p>Reunión Dominical</p>
+        <p>11:15 am a 01:00 pm</p>
+        <span class="tooltip">Da click para obtener el enlace</span>
+    </div>
+</div>
+
+</body>
+</html>
+

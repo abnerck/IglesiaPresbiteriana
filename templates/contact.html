@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block juan3 %}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Formulario de Contacto</h2>
+    {% if success %}
+        <div class="alert alert-success">¡Gracias por enviar tus datos! Nos comunicaremos contigo lo mas pronto posible.</div>
+    {% endif %}
+    <form method="POST" action="/contact">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Número de Teléfono</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="subject" class="form-label">Asunto</label>
+            <textarea class="form-control" id="subject" name="subject" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+{% endblock %}

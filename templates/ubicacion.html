@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+{% block juan3 %}{% endblock %}
+
+{% block content %}
+<h1>Ven conmigo a la casa de Dios</h1>
+
+<div id="map" style="height: 500px; width: 100%;"></div>
+
+<!-- Incluye el script de Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5RQpCdHvk1k4QDt2w7-t0OumQ_UORhls"></script>
+
+<body>
+    
+
+    <!-- Elemento div para mostrar el mapa -->
+    <div id="map"></div>
+
+    <script>
+        // Función para inicializar y mostrar el mapa
+        function initMap() {
+            // Coordenadas de la ubicación del negocio (latitud y longitud)
+            var negocioLocation = { lat: 18.80706063264023, lng: -99.22788975987221 }; // Cambia las coordenadas
+
+            // Crea un nuevo mapa y lo muestra en el elemento div con id "map"
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: negocioLocation, // Establece el centro del mapa en la ubicación del negocio
+                zoom: 15 // Establece el nivel de zoom
+            });
+
+            // Crea un marcador en la ubicación del negocio
+            var marker = new google.maps.Marker({
+                position: negocioLocation,
+                map: map,
+                title: 'Nombre del Negocio' // Puedes cambiar el nombre
+            });
+        }
+
+        // Llama a la función initMap cuando la página se carga
+        google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+    <style>
+        h1 {
+            color: rgb(0, 0, 0);
+            /* Cambia el color si es necesario para mejorar la legibilidad */
+            text-align: center;
+            /* Centra el texto si lo deseas */
+            font-size: xx-large;
+        }
+    </style>
+</body>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %} 
+
+{% block juan3 %}{% endblock %}
+
+{% block content %}
+<center>
+<h1>IDENTIDAD</h1>
+</center>
+<br><br><br><br>
+
+<div class="container">
+    <div class="cuadro">
+        <h2>Misión</h2>
+        <b>
+        <p>Servir a la comunidad</p>
+        </b>
+    </div>
+    <div class="cuadro">
+        <h2>Visión</h2>
+        <b>
+        <p>Que la gente conozca a Dios revelado en las escrituras</p>
+        </b>
+    </div>
+    <div class="cuadro">
+        <h2>Valores</h2>
+        <h4>5 SOLAS</h4>
+        <b>
+        <p class="justificado">
+            1.- Solo las escrituras <br>
+            2.- Solo por la Fé <br>
+            3.- Solo por la Gracia <br>
+            4.- Solo Cristo <br>
+            5.- Solo a Dios la Gloria
+        </p>
+        </b>
+    </div>
+</div>
+
+<!-- Sección de redes sociales -->
+<div class="redes-sociales">
+    <h3>Síguenos en nuestras redes sociales:</h3>
+    <a href="https://www.facebook.com/profile.php?id=100090409806043" target="_blank">
+        <i class="fab fa-facebook-square"></i>
+    </a>
+    <a id="wa" href="https://wa.me/7771578123" target="_blank">
+        <i class="fab fa-whatsapp"></i> <!-- Icono de WhatsApp -->
+    </a>
+</div>
+
+<style>
+    .justificado {
+        text-align: justify; /* Justifica el texto */
+    }
+    .container {
+        display: flex; /* Usar flexbox para alinear los cuadros */
+        justify-content: space-around; /* Espaciado entre los cuadros */
+        margin: 50px 10; /* Espacio en la parte superior e inferior */
+    }
+
+    .cuadro {
+        background-color: rgba(225, 225, 234, 0.9); /* Color de fondo blanco con algo de transparencia */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+        padding: 20px; /* Espaciado interno */
+        width: 30%; /* Ancho de los cuadros */
+        text-align: center; /* Centrar el texto */
+        transition: transform 0.2s; /* Transición suave al pasar el mouse */
+    }
+
+    .cuadro:hover {
+        transform: translateY(-5px); /* Levanta el cuadro al pasar el mouse */
+    }
+
+    .redes-sociales {
+        text-align: center; /* Centrar contenido */
+        margin: 20px 0; /* Espaciado arriba y abajo */
+    }
+
+    .redes-sociales a {
+        display: inline-block; /* Permite definir ancho y alto */
+        width: 3cm; /* Ancho del icono */
+        height: 3cm; /* Alto del icono */
+        margin: 0 10px; /* Espacio entre iconos */
+        font-size: 60px; /* Tamaño del icono */
+        color: #000; /* Color del icono */
+        transition: color 0.3s, transform 0.3s; /* Transiciones suaves para el color y el tamaño */
+    }
+
+    .redes-sociales a:hover {
+        color: #007bff; /* Color al pasar el mouse */
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono al pasar el mouse */
+    }
+   
+    
+</style>
+
+<!-- Incluye Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+{% endblock %}

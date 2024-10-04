@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %} <!-- Sobrescribimos el bloque para no mostrar el título -->
+
+{% block juan3 %}{% endblock %}
+
+{% block content %}
+
+<center><h1>Nos reunimos</h1></center>
+
+<br><br><br>
+<div class="container">
+    <div class="cuadro">
+        <a href="https://meet.google.com/bsg-tsoh-xit" target="_blank" style="text-decoration: none; color: inherit;">
+            <h2>Lunes</h2>
+            <b>
+                <p>Estudio Biblico</p>
+                <p>08:00 pm a 09:00 pm</p>
+            </b>
+        </a>
+    </div>
+    <div class="cuadro">
+        <a href="https://meet.google.com/bsg-tsoh-xit" target="_blank" style="text-decoration: none; color: inherit;">
+            <h2>Miercoles</h2>
+            <b>
+                <p>Oracion</p>
+                <p>Horario 08:00 pm a 09:00 pm</p>
+            </b>
+        </a>
+    </div>
+    <div class="cuadro">
+        <a href="https://meet.google.com/bsg-tsoh-xit" target="_blank" style="text-decoration: none; color: inherit;">
+            <h2>Miercoles</h2>
+            <b>
+                <p>Estudio Biblico</p>
+                <p>Horario 09:00 pm a 10:00 pm</p>
+            </b>
+        </a>
+    </div>
+</div>
+
+<br>
+<div class="container">
+    <div class="cuadro">
+        <a href="https://meet.google.com/bsg-tsoh-xit" target="_blank" style="text-decoration: none; color: inherit;">
+            <h2>Sabado</h2>
+            <b>
+                <p>Estudio Biblico</p>
+                <p>Horario 13:00 pm a 14:00 pm</p>
+            </b>
+        </a>
+    </div>
+    <div class="cuadro">
+        <a href="https://meet.google.com/bsg-tsoh-xit" target="_blank" style="text-decoration: none; color: inherit;">
+            <h2>Domingo</h2>
+            <b>
+                <p>Reunion Dominical</p>
+                <p>Horario: 11:15 am a 01:00 pm </p>
+            </b>
+        </a>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex; /* Usar flexbox para alinear los cuadros */
+        justify-content: space-around; /* Espaciado entre los cuadros */
+        margin: 50px 10; /* Espacio en la parte superior e inferior */
+    }
+
+    .cuadro {
+        background-color: rgba(225, 225, 234, 0.9); /* Color de fondo blanco con algo de transparencia */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+        padding: 20px; /* Espaciado interno */
+        width: 30%; /* Ancho de los cuadros */
+        text-align: center; /* Centrar el texto */
+        transition: transform 0.2s; /* Transición suave al pasar el mouse */
+        position: relative; /* Necesario para posicionar el tooltip */
+    }
+
+    .cuadro:hover {
+        transform: translateY(-5px); /* Levanta el cuadro al pasar el mouse */
+    }
+
+    a {
+        display: block; /* Permite que el enlace cubra todo el cuadro */
+        height: 100%; /* Asegura que el enlace ocupe toda la altura del cuadro */
+    }
+</style>
+
+{% endblock %}

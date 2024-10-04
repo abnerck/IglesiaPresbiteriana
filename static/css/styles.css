@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'MiFuente'; /* Nombre que le asignas a la fuente */
+    src: url('../fonts/iglesia/Iglesia.ttf') format('woff'); /* Ruta relativa desde el archivo CSS */
+    font-weight: normal; /* O 'bold', según sea necesario */
+    font-style: normal; /* O 'italic', según sea necesario */
+}
+
+body {
+    background-image: url('/static/Imegenes/cruz.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Fija el fondo mientras haces scroll */
+}
+
+h1.titulo {
+    font-family: 'MiFuente', sans-serif; /* Aplica la fuente personalizada al h1 */
+    color: rgb(0, 0, 0); /* Cambia el color si es necesario para mejorar la legibilidad */
+    text-align: center; /* Centra el texto si lo deseas */
+    font-size:xxx-large;
+    
+}
+
+
+audio {
+    width: 200px; /* Cambia el ancho según lo necesites */
+    position: fixed; /* Fija el reproductor en la pantalla */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    left: 20px; /* Distancia desde la izquierda */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
